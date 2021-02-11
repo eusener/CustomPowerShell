@@ -33,7 +33,7 @@ function prompt {
     write-host "$env:Virtual_env" -NoNewline ##($(split-path $env:VIRTUAL_ENV -leaf)) " -nonewline & $function:_old_virtual_prompt
     Write-Host " >> " -NoNewline -ForegroundColor DarkGray
     $LastExitCode = $origLastExitCode
-    "`n$('>' * ($nestedPromptLevel + 1)) "
+    "`n$('->' * ($nestedPromptLevel + 1)) "
 }
 
 Import-Module posh-git
